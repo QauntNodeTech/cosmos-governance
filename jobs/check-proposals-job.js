@@ -2,13 +2,13 @@ import {CronJob} from "cron";
 import {Settings} from "../config/settings.js";
 import LcdClient from "../lib/lcd.js";
 import database from "../services/database.js";
-import {sendProposalToDiscord} from "../services/discord.js";
+import {sendProposalToTelegram} from "../services/telegram.js";
 
 const NewProposalMiliseconds = 1000 * 60 * 60 * 24 * 7;
 
 export default function checkProposalsJob() {
     let isRunning = false;
-    const cronJob = new CronJob('0 */5 * * * *', async () => {
+    const cronJob = new CronJob('*/15 * * * * *', async () => {
         if (isRunning) {
             console.log('checkProposalsJob is already running.');
             return;
@@ -47,7 +47,7 @@ async function processProposals(chain) {
                 continue;
             }
 
-            await sendProposalToDiscord(proposal, chain);
+            await sendProposalToTelegram(proposal, chain);
             await database.createProposal(proposal.id, chain.name);
         }
     } catch (error) {

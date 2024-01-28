@@ -1,34 +1,32 @@
 {
   "chains": [
     {
-      "name": "Evmos",
-      "lcd": "https://evmos-api.polkachu.com/",
-      "logoUrl": "https://pbs.twimg.com/profile_images/1595092806011191305/koqPJsUX_400x400.png",
-      "dcChannelId": "1035828716875563101",
-      "proposalUrl": "https://www.mintscan.io/evmos/proposals/{id}",
-      "binaryName": "evmosd",
-      "chainId": "evmos",
-      "embedColor": "#FF0000"
+      "name": "AxelarTestnet",
+      "lcd": "https://axelartest-lcd.quantnode.tech/cosmos/gov/v1beta1/proposals?pagination.reverse=true",
+      "proposalUrl": "https://testnet.axelarscan.io/proposal/{id}",
+      "binaryName": "axelard",
+      "chainId": "axelar-dojo-1"
     },
     {
-      "name": "Okp4",
-      "lcd": "https://api.testnet.okp4.network/",
-      "logoUrl": "https://pbs.twimg.com/profile_images/1537721318191267840/GK12zUWJ_400x400.jpg",
-      "dcChannelId": "968040698546909184",
-      "proposalUrl": "https://explore.okp4.network/okp4%20testnet/gov/{id}",
-      "binaryName": "okp4d",
-      "chainId": "okp4-nemeton",
-      "embedColor": "#FF0000"
+      "name": "AxelarMainnet",
+      "lcd": "https://axelar-lcd.quantnode.tech/cosmos/gov/v1beta1/proposals?pagination.reverse=true",
+      "proposalUrl": "https://axelarscan.io/proposal/{id}",
+      "binaryName": "axelard",
+      "chainId": "axelar-testnet-lisbon-3"
     },
     {
-      "name": "Quicksilver",
-      "lcd": "https://lcd-quicksilver.stakerun.com",
-      "logoUrl": "https://pbs.twimg.com/profile_images/1488798003473358848/V2gPwVeO_400x400.jpg",
-      "dcChannelId": "968040698546909184",
-      "proposalUrl": "https://scanrun.io/quicksilver/proposals/{id}",
-      "binaryName": "quicksilverd",
-      "chainId": "quicksilver-2",
-      "embedColor": "#FF0000"
+      "name": "AgoricTestnet",
+      "lcd": "https://emerynet.api.agoric.net/cosmos/gov/v1beta1/proposals?pagination.reverse=true",
+      "proposalUrl": "https://emerynet.explorer.agoric.net/agoric/gov/{id}",
+      "binaryName": "agd",
+      "chainId": "agoric-emerynet-8"
+    },
+    {
+      "name": "AgoricMainnet",
+      "lcd": "https://main.api.agoric.net/cosmos/gov/v1beta1/proposals?pagination.reverse=true",
+      "proposalUrl": "https://bigdipper.live/agoric/proposals/{id}",
+      "binaryName": "agd",
+      "chainId": "agoric-3"
     }
   ]
 }
